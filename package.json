@@ -12,8 +12,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "precommit": "npm test",
-    "prepush": "npm test"
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -33,6 +33,11 @@
     ]
   },
   "devDependencies": {
-    "husky": "^8.0.3"
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "eslint": "^8.44.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
+    "prettier": "3.0.0"
   }
 }
